@@ -55,4 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['abouts'] = 'welcome/demo';
 
-$routes['test'] = 'PageController/test';
+$route['home'] = 'PageController/tests';
+
+$route['blog/(:any)'] = 'PageController/blog/$1';

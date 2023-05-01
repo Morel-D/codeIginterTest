@@ -9,8 +9,14 @@ class PageController extends CI_Controller
         echo "This is the first test";
     }
 
-    public function test()
+    public function tests()
     {
-        $this->load->view('test');
+        echo "This is the second test";
+    }
+
+    public function blog($blog_note = '')
+    {
+        echo "$blog_note";
+        $this->load->view('blogView');
     }
 }

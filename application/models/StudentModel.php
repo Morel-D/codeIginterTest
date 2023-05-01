@@ -15,4 +15,14 @@ class StudentModel extends CI_Model
     {
         return $student_class = "Form 1";
     }
+
+    public function student_show($id)
+
+    {
+        if ($id == "1") {
+            return $results = "user 1";
+        } elseif ($id == "2") {
+            return $results = "user 2";
+        }
+    }
 }

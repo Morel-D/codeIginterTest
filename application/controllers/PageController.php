@@ -19,4 +19,11 @@ class PageController extends CI_Controller
         echo "$blog_note";
         $this->load->view('blogView');
     }
+
+    public function first()
+    {
+        $info['name'] = "Morel Denzel";
+        $info['age'] = 20;
+        $this->load->view('hello', $info);
+    }
 }

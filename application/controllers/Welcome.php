@@ -21,7 +21,11 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+
+		$this->load->database();
+		$data =	$this->db->query('select * from users');
+
+		print_r($data->result());
 	}
 
 	public function demo()

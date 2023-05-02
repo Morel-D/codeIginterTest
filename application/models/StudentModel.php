@@ -25,4 +25,10 @@ class StudentModel extends CI_Model
             return $results = "user 2";
         }
     }
+
+
+    public function gender()
+    {
+        return  $gender = "Male";
+    }
 }

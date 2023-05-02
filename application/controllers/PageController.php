@@ -22,6 +22,12 @@ class PageController extends CI_Controller
 
     public function first()
     {
+        $this->load->model('StudentModel');
+
+        $gender = new StudentModel;
+        $gender = $gender->gender();
+
+        $info['gender'] = $gender;
         $info['name'] = "Morel Denzel";
         $info['age'] = 20;
         $this->load->view('hello', $info);

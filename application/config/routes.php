@@ -53,8 +53,9 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['abouts'] = 'welcome/demo';
 
-$route['home'] = 'PageController/tests';
+// ------------------------------------------------
+// Employee Routes
 
-$route['blog/(:any)'] = 'PageController/blog/$1';
+$route['employee'] = 'EmployeeController';
+$route['employee/add'] = 'EmployeeController/create';

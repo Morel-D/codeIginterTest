@@ -23,9 +23,6 @@ class Welcome extends CI_Controller
 	{
 
 		$this->load->database();
-		$data =	$this->db->query('select * from users');
-
-		print_r($data->result());
 	}
 
 	public function demo()

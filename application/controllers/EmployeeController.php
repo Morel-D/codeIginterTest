@@ -17,4 +17,16 @@ class EmployeeController extends CI_Controller
         $this->load->view('create');
         $this->load->view('template/footer');
     }
+
+    public function store()
+    {
+        $data = [
+            'f_name' => $this->input->post('f_name'),
+            'l_name' => $this->input->post('l_name'),
+            'phone' => $this->input->post('phone'),
+            'email' => $this->input->post('email'),
+        ];
+
+        print_r($data);
+    }
 }

@@ -1,3 +1,9 @@
+	<?php
+
+	$num = 1;
+
+	?>
+
 	<body>
 		<div class="container-fluid p-5">
 			<div class="row">
@@ -26,14 +32,14 @@
 				<tbody>
 					<?php foreach ($employees as $employee) {  ?>
 						<tr>
-							<td>1</td>
+							<td><?php echo $num++ ?></td>
 							<td><?php echo $employee->uid ?></td>
 							<td><?php echo $employee->f_name ?></td>
 							<td><?php echo $employee->l_name ?></td>
 							<td><?php echo $employee->phone ?></td>
 							<td><?php echo $employee->email ?></td>
 							<td>
-								<button class="btn btn-warning">Edit</button>
+								<a href="<?php echo base_url('employee/edit/' . $employee->id) ?>" class="btn btn-warning">Edit</a>
 								<button class="btn btn-primary">view</button>
 								<button class="btn btn-danger">delete</button>
 							</td>

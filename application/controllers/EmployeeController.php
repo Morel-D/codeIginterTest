@@ -26,13 +26,26 @@ class EmployeeController extends CI_Controller
         $this->form_validation->set_rules('phone', 'Phone Number', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
 
+        // Random number generator
+        $letters = "EMP";
+        $length = 7;
+        $min = pow(10, $length - 1);
+        $max = pow(10, $length) - 1;
+
+        $random_number = rand($min, $max);
+
         if ($this->form_validation->run()) {
             $data = [
+                'uid' => $letters . $random_number,
                 'f_name' => $this->input->post('f_name'),
                 'l_name' => $this->input->post('l_name'),
                 'phone' => $this->input->post('phone'),
                 'email' => $this->input->post('email'),
             ];
+
+            $this->load->model('EmployeeModel');
+            $this->EmployeeModel->insertEmployee($data);
+            redirect(base_url('employee'));
         } else {
             $this->create();
         }

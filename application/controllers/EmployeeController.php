@@ -7,7 +7,10 @@ class EmployeeController extends CI_Controller
     public function index()
     {
         $this->load->view('template/header');
-        $this->load->view('employee');
+
+        $this->load->model('EmployeeModel');
+        $data['employees'] = $this->EmployeeModel->getEmployee();
+        $this->load->view('employee', $data);
         $this->load->view('template/footer');
     }
 

@@ -24,19 +24,21 @@
 				</thead>
 				<tbody>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>1236543</td>
-						<td>Tchaptche</td>
-						<td>Denzel</td>
-						<td>+237231476</td>
-						<td>denzel@gmail.com</td>
-						<td>
-							<button class="btn btn-warning">Edit</button>
-							<button class="btn btn-primary">view</button>
-							<button class="btn btn-danger">delete</button>
-						</td>
-					</tr>
+					<?php foreach ($employees as $employee) {  ?>
+						<tr>
+							<td>1</td>
+							<td><?php echo $employee->uid ?></td>
+							<td><?php echo $employee->f_name ?></td>
+							<td><?php echo $employee->l_name ?></td>
+							<td><?php echo $employee->phone ?></td>
+							<td><?php echo $employee->email ?></td>
+							<td>
+								<button class="btn btn-warning">Edit</button>
+								<button class="btn btn-primary">view</button>
+								<button class="btn btn-danger">delete</button>
+							</td>
+						</tr>
+					<?php }  ?>
 				</tbody>
 				</tbody>
 			</table>

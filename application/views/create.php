@@ -17,21 +17,27 @@
                         <div class="form-group">
                             <label class="lead">Enter First Name</label>
                             <input type="text" name="f_name" class="form-control" />
+                            <small class="text-danger"><?php echo form_error('f_name') ?></small>
                         </div>
 
                         <div class="form-group">
                             <label class="lead">Enter Last Name</label>
                             <input type="text" name="l_name" class="form-control" />
+                            <small class="text-danger"><?php echo form_error('l_name') ?></small>
                         </div>
 
                         <div class="form-group">
                             <label class="lead">Enter Phone Number</label>
                             <input type="text" name="phone" class="form-control" />
+                            <small class="text-danger"><?php echo form_error('phone') ?></small>
                         </div>
 
                         <div class="form-group">
                             <label class="lead">Enter Email</label>
                             <input type="text" name="email" class="form-control" />
+                            <small class="text-danger">
+                                <?php echo form_error('email') ?>
+                            </small>
                         </div>
 
                         <div class="form-group">
